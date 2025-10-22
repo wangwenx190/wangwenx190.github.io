@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: ".",
-  base: "/123/",
+  base: "/",
   title: "Reyalp",
   description: "Reyalp",
   head: [['link', { rel: 'icon', href: '/reyalp.svg' }]],
