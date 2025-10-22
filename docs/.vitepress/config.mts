@@ -3,7 +3,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: ".",
-  base: "/",
+  rewrites: {
+    'en_US/:rest*': ':rest*' // make the English content as the root page
+  },
   title: "Reyalp",
   description: "Reyalp",
   head: [['link', { rel: 'icon', href: '/reyalp.svg' }]],
@@ -28,5 +30,15 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
+  },
+  locales: {
+    root: {
+      label: 'English',
+      'lang': 'en_US'
+    },
+    'zh_CN': {
+      label: '简体中文',
+      'lang': 'zh_CN'
+    }
   }
 })
